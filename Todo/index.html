@@ -5,9 +5,100 @@
 </head>
 <body>
 
-    <script src="index.js" >
+    <script src="index.js" > </script>
+    <!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+</head>
+
+<body>
+<h1> TO DO LIST! </h1>
+    <script>
+
+
+
+        var todo = [];
+
+
+        function add_item(new_item) {
+            todo.push(new_item);
+        }
+
+
+        function show_list() {
+            var string = "TODO List\n\n";
+            for (var i = 0; i < todo.length; i = i + 1) {
+                string += i + 1 + ". " + todo[i] + "\n";
+
+            }
+            console.log(string);
+        }
+        function mark_item(index) {
+
+            for (var i = 0; i < todo.length; i++) {
+                if (index === i) {
+                    todo[i] = todo[i] + " ✓";
+                }
+            }
+
+        }
+        function edit_item(i, edit) {
+
+            todo[i] = edit;
+
+
+        }
+
+
+        function del_item(index) {
+
+            var deleted_value = todo.splice(index, 1)[0];
+
+            console.log("THe item deleted from array is: ", deleted_value);
+            console.log("The array after the modificaton", todo);
+
+        }
+
+
+
+        add_item("DRIVING");
+        add_item("SWIMING");
+        add_item("SKATING");
+        add_item("DANCING");
+
+
+
+        show_list();
+
+
+        del_item(2);
+
+
+
+        show_list();
+
+
+        mark_item(0);
+        mark_item(1);
+
+
+        show_list();
+
+
+
+        edit_item(2, "LAUGHING");
+
+
+        show_list();
     </script>
+
+</body>
+</html> 
 </body>
 
 
