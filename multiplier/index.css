@@ -1,0 +1,10 @@
+.mul{
+    display: inline-block;
+    margin: 20px;
+    border: 2px solid rgb(24, 135, 226);
+}
+.cont{
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(3, 44, 12);
+}  
